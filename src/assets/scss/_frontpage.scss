@@ -1,0 +1,145 @@
+/*
+	Frontpage
+*/
+.front-img {
+	background-image: url('../img/image.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	height: 658px;
+	position: relative;
+	margin-bottom: 90px;
+}
+.textbox-back {
+	background-color: rgba( #000, .6 );
+	height: 297px;
+	width: 45%;
+	position: absolute;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+.super-textbox {
+	position: absolute;
+	width: 100%;
+  	top: 50%;
+  	transform: translatey(-50%);
+  	padding-top: 20px;
+  	padding-bottom: 20px;	
+	h1 {
+		margin: 0;
+		font-size: 60px;
+		line-height: 64px;
+		color: $white-color;
+	}
+	h3 {
+		font-size: 14px;
+		line-height: 23px;
+		margin-bottom: 20px;
+		color: $white-color;
+		text-transform: none;
+		padding-right: 10px;
+	}
+}
+.img-dots {
+	position: absolute;
+	bottom: 120px;
+	left: 50%;
+	transform: translatex(-50%);
+	img {
+		height: 14px;
+	}
+}
+.item-wrap {
+	h3 {
+		font-size: 22px;
+		color: $primary-red;
+	}
+	img {
+      width: 100%;
+    }
+}
+.border-text {
+	text-align: center;
+	font-size: 22px;
+	color: $dark-grey;
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		@include border($border-grey, bottom);
+		width: 155px;
+		top: 50%;
+		left: 26%;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		@include border($border-grey, bottom);
+		width: 155px;
+		top: 50%;
+		left: 61%;
+	}
+}
+.product-wrap {
+	button {
+		width: 100%;
+		padding: 10px 20px;
+	}
+	.product-img {
+		padding: 53px 10px;
+		@include border($border-grey, top, bottom, left, right);
+		position: relative;
+	}
+}
+.star-group {
+	position: absolute;
+	top: 0;
+	img {
+		width: 13px;
+		height: 13px;
+	}
+}
+.product-text {
+	@include border($border-grey, left, right);
+	padding: 22px;
+	h3 {
+		margin-top: 0;
+		margin-bottom: 11px;
+	}
+	h4 {
+		margin-top: 0;
+		margin-bottom: 9px;
+	}
+	p {
+		margin-top: 0;
+		margin-bottom: 12px;
+		padding-bottom: 11px;
+		@include border($border-grey, bottom);
+	}
+	img {
+		float: right;
+		padding-left: 8px;
+	}
+}
+.newsletter {
+	margin-top: 4px;
+	background-color: $primary-red;
+}
+.newsletter-content {
+	@include flexbox();
+	height: 100px;
+	align-items: center;
+	justify-content: space-between;
+	h2 {
+		color: $white-color;
+		margin: 0;
+	}
+	button {
+		background-color: #ff674f;
+		margin-left: 20px;
+	}
+	input {
+		width: 247px;
+		border: 0;
+	}
+}

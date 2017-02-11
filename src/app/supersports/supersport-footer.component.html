@@ -1,0 +1,39 @@
+<footer>
+	<div class="container">
+		<div class="row footer">
+			<div class="footer-column-1">
+				<h2>{{firstColumnTitle}}</h2>
+				<p>Feel free to visit our stores or contact us.</p>
+				<div *ngFor='let store of stores'>
+					<p>{{store.address}}<br>{{store.city}}<br>{{store.phone}}<br></p>
+				</div>
+				<div class="social-icons">
+					<img src="assets/img/social_facebook.svg">
+					<img src="assets/img/social_twitter.svg">
+					<img src="assets/img/social_google.svg">
+					<img src="assets/img/social_vimeo.svg">
+					<img src="assets/img/social_rss.svg">
+				</div>
+			</div>
+			<div class="footer-column-2 hidden-xs">
+				<h2>{{secondColumnTitle}}</h2>
+				<h4>Lorem ipsum hey</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed auctor elit.</p>
+				<h4>New sexy sport clothes are here!</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed auctor elit.</p>
+				<h4>Summer sales are coming!</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed auctor elit.</p>
+			</div>
+			<div class="footer-column-3">
+				<h2>{{thirdColumnTitle}}</h2>
+				<ul>
+					<li *ngFor="let firstlink of firstlinks">{{firstlink.name}}</li>
+				</ul>
+				<ul>
+					<li *ngFor="let secondlink of secondlinks">{{secondlink.name}}</li>
+					<li class="visible-xs-block">Blog Posts</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>

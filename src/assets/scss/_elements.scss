@@ -1,0 +1,89 @@
+/*
+	Fonts
+*/
+p {
+	font-family: $font-main;
+	color: $medium-grey;
+}
+h1, h2, h3, h4, h5 {
+	font-family: $font-headline;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: $dark-grey;
+}
+span  {
+	font-family: $font-main;
+}
+button {
+	background-color: $primary-red;
+	color: $white-color;
+	border: 0;
+	font-family: $font-main;
+	letter-spacing: 0.07em;
+	padding: 15px 20px;
+	outline-style: none;
+	text-transform: uppercase;
+	&:focus {
+		box-shadow: 2px 2px 4px rgba( $extralight-grey, .5 );
+	}
+}
+input {
+	padding: 14px 24px;
+	font-size: 14px;
+	font-family: $font-main;
+	text-transform: uppercase;
+	color: $medium-grey;
+	letter-spacing: 0.07em;
+	@include border(1px solid $medium-grey, right, left, bottom, top);
+	&:focus {
+		outline: none;
+	}
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0;
+}
+label {
+	font-family: $font-main;
+	font-weight: 800;
+	font-size: 20px;
+	color: $medium-grey;
+	letter-spacing: 0.07em;
+	display: block;
+}
+select {
+	@include border(1px solid $medium-grey, right, left, bottom, top);
+	background-color: $white-color;
+	border-radius: 0;
+	-webkit-appearance: none;
+	font-size: 20px;
+	letter-spacing: 0.07em;
+	font-family: $font-main;
+	color: $medium-grey;
+	padding: 15px 10px;
+	&:focus {
+		outline: none;
+	}
+}
+ins {
+	color: $primary-red;
+	text-decoration: none;
+}
+@media (min-width: $screen-sm-min) {
+	.no-padding {
+	padding: 0;
+	}
+}
+.no-padding-left {
+	padding-left: 0;
+}
+.no-padding-right {
+	padding-right: 0;
+}
+.margin-bottom {
+	margin-bottom: 30px;
+}
+.margin-top {
+	margin-top: 27px;
+}

@@ -1,0 +1,135 @@
+.product-big-img {
+	@include border($border-grey,top, right, bottom, left);
+	padding: 10px;
+	text-align: center;	
+}
+.product-img-group {
+	@include flexbox();
+	justify-content: space-between;
+}
+.product-small-img {
+	@include border($border-grey,top, right, bottom, left);
+	margin: 15px;
+	@include flexbox();
+  align-items: center;
+  justify-content: center;
+	&:first-child {
+		margin-left: 0;
+	}
+	&:last-child {
+		margin-right: 0;
+	}
+}
+.img-selected {
+	@include border(1px solid $primary-red,top, right, bottom, left);
+}
+.product-info-top {
+	strong {
+		font-size: 40px;
+		font-weight: 800;
+		letter-spacing: 0.07em;
+		color: #000;
+	}
+	.product-info-price {
+		text-align: right;
+	}
+	.price {
+		margin-bottom: 18px;
+	}
+	p {
+		margin: 0;
+	}
+	del {
+		color: $medium-grey;
+		font-size: 24px;
+		line-height: 24px;
+	}
+	em {
+		font-size: 20px;
+		line-height: 24px;
+	}
+}
+.product-select {
+	margin-top: 57px;
+	margin-bottom: 40px;
+}
+.product-select-size {
+	float: left;
+	width: 70%;
+	select {
+		width: 100%;
+	}
+}
+.product-select-amount {
+	float: right;
+	text-align: right;
+	width: 20%;
+	input {
+		width: 100px;
+		text-align: center;
+		font-size: 20px;
+		letter-spacing: 0.07em;
+  	font-weight: 800; 
+	}
+}
+.add-to-basket {
+	font-weight: 800;
+	font-size: 28px;
+	padding: 18px 65px;
+	float: right;
+}
+.tabs-menu {
+    margin-bottom: 0;
+    list-style-type: none;
+}
+.tabs-menu li {
+		background-color: $tabs-background;
+		font-size: 24px;
+		line-height: 28px;
+    display: inline-block;
+    padding: 30px 35px 20px;
+    margin-right: 10px;
+    z-index: -1;
+    @include border(1px solid #ccc, left, right, top);
+    border-radius: 9px 9px 0 0;
+}
+.tabs-menu li.current {
+    position: relative;
+    background-color: #fff;
+    @include border(1px solid #ccc, left, right);
+    @include border(1px solid $white-color, bottom);
+    z-index: 100;
+    margin-bottom: -1px;
+    &:before {
+	  	position: absolute;
+	  	content: '';
+			display: block;
+			top: 0; right: 0; bottom: 0; left: 0;
+	  	@include border(9px solid $primary-red, top);
+	  	border-radius: 9px 9px 0 0;
+	  	margin-right: 0;
+	  }
+}
+.tabs-menu li a {
+    color: $medium-grey;
+    text-decoration: none; 
+}
+.tabs-menu .current{
+    border-top: 0;
+}
+.tab {
+    @include border(1px solid #ccc, top);
+    background-color: #fff;
+    margin-bottom: 20px;
+    width: auto;
+}
+.tab-content {
+    display: none;
+    margin-top: 20px;
+    p {
+    	font-size: 16px;
+    }
+}
+#tab-1 {
+ display: block;   
+}
