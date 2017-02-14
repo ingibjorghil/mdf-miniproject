@@ -9,6 +9,8 @@ import { SupersportFooterComponent } from './supersports/supersport-footer.compo
 import { SupersportFrontpageComponent } from './supersports/supersport-frontpage.component';
 import { SupersportContactComponent } from './supersports/supersport-contact.component';
 import { SupersportDetailProductComponent } from './supersports/supersport-detail-product.component';
+import { ProductItemComponent } from './products/product-item.component';
+import { PopularProductPipe } from './products/popularproduct.pipe';
 import { routing } from './app.routing';
 
 @NgModule({
@@ -24,7 +26,9 @@ import { routing } from './app.routing';
   	SupersportFooterComponent, 
   	SupersportFrontpageComponent,
     SupersportContactComponent,
-    SupersportDetailProductComponent
+    SupersportDetailProductComponent,
+    ProductItemComponent,
+    PopularProductPipe
   ],
   providers: [
     Title 

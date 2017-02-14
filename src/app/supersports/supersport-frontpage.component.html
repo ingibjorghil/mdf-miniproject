@@ -96,7 +96,7 @@
 		<div class="popular-products">
 			<h2 class="border-text">POPULAR PRODUCTS</h2>
 			<div class="row margin-bottom">
-				<div class="col-md-3 col-xs-6">
+				<div class="col-md-3 col-xs-6" *ngFor="let product of (products | popularproduct)">
 					<div class="product-wrap">
 						<div class="product-img">
 							<div class="star-group">
@@ -105,78 +105,12 @@
 								<img src="assets/img/star.svg">
 								<img src="assets/img/star.svg">
 							</div>
-							<img class="product-thumb" src="assets/img/shoe.png">
+							<img class="product-thumb" src="{{product.imgthumb}}">
 						</div>
 						<div class="product-text">
-							<h3><a routerLink="/detail-product">Gel-Fujitrabuco 5 G-Tx</a></h3>
-							<h4>Running shoe</h4>
-							<p>God og robust terrænløbesko med GORE-TEX-membran. Overdel i let mesh og sål med affjedring både i hæl og forfod....</p>
-							<ins>$ 86.99</ins>
-						<img src="assets/img/heart.svg">
-						<img src="assets/img/plus.svg">
-						</div>
-						<button>buy now</button>
-					</div>
-				</div>
-				<div class="col-md-3 col-xs-6">
-					<div class="product-wrap">
-						<div class="product-img">
-							<div class="star-group">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-							</div>
-							<img class="product-thumb" src="assets/img/shoe.png">
-						</div>
-						<div class="product-text">
-							<h3><a routerLink="/detail-product">Gel-Fujitrabuco 5 G-Tx</a></h3>
-							<h4>Running shoe</h4>
-							<p>God og robust terrænløbesko med GORE-TEX-membran. Overdel i let mesh og sål med affjedring både i hæl og forfod....</p>
-							<ins>$ 86.99</ins>
-						<img src="assets/img/heart.svg">
-						<img src="assets/img/plus.svg">
-						</div>
-						<button>buy now</button>
-					</div>
-				</div>
-				<div class="col-md-3 col-xs-6">
-					<div class="product-wrap">
-						<div class="product-img">
-							<div class="star-group">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-							</div>
-							<img class="product-thumb" src="assets/img/shoe.png">
-						</div>
-						<div class="product-text">
-							<h3><a routerLink="/detail-product">Gel-Fujitrabuco 5 G-Tx</a></h3>
-							<h4>Running shoe</h4>
-							<p>God og robust terrænløbesko med GORE-TEX-membran. Overdel i let mesh og sål med affjedring både i hæl og forfod....</p>
-							<ins>$ 86.99</ins>
-						<img src="assets/img/heart.svg">
-						<img src="assets/img/plus.svg">
-						</div>
-						<button>buy now</button>
-					</div>
-				</div>
-				<div class="col-md-3 col-xs-6">
-					<div class="product-wrap">
-						<div class="product-img">
-							<div class="star-group">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-							</div>
-							<img class="product-thumb" src="assets/img/shoe.png">
-						</div>
-						<div class="product-text">
-							<h3><a routerLink="/detail-product">Gel-Fujitrabuco 5 G-Tx</a></h3>
-							<h4>Running shoe</h4>
-							<p>God og robust terrænløbesko med GORE-TEX-membran. Overdel i let mesh og sål med affjedring både i hæl og forfod....</p>
+							<h3><a [routerLink]="['/product',product.id]">{{product.name}}</a></h3>
+							<h4>{{product.category}}</h4>
+							<p>{{product.shortdescription}}</p>
 							<ins>$ 86.99</ins>
 						<img src="assets/img/heart.svg">
 						<img src="assets/img/plus.svg">

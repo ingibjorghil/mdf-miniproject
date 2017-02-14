@@ -97,7 +97,7 @@
 		@include border($border-grey, bottom);
 		width: 155px;
 		top: 50%;
-		left: 61%;
+		right: 26%;
 	}
 }
 .product-wrap {
@@ -109,11 +109,11 @@
 		padding: 53px 10px;
 		@include border($border-grey, top, bottom, left, right);
 		position: relative;
-		img {
-			width: 100%;
-		}
 	}
 }
+.product-thumb {
+		width: 100%;
+	}
 .star-group {
 	position: absolute;
 	top: 0;

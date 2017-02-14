@@ -6,9 +6,9 @@ import { SupersportContactComponent } from './supersports/supersport-contact.com
 import { SupersportDetailProductComponent } from './supersports/supersport-detail-product.component';
 
 const appRoutes: Routes = [
-	{ path: '', component: SupersportFrontpageComponent },
+	{ path: '', component: SupersportFrontpageComponent},
 	{ path: 'contact', component: SupersportContactComponent},
-	{ path: 'detail-product', component: SupersportDetailProductComponent}
+	{ path: 'product/:id', component: SupersportDetailProductComponent}
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);

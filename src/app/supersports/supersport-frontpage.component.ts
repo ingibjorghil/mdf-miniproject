@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { Products } from '../products/products.interface';
+import { ProductItemComponent } from '../products/product-item.component';
+import { PRODUCTITEMS } from '../shared/data';
 
 @Component({
 	selector: 'supersport-frontpage',
@@ -9,11 +12,14 @@ import { Title } from '@angular/platform-browser';
 
 export class SupersportFrontpageComponent {
 	constructor(private titleService: Title) { }
+    
+	products:Products[];
+
     ngOnInit() {
         this.titleService.setTitle('Supersports');
+        this.products = PRODUCTITEMS;
     }
 
-	
 	frontpagecategories = [{
 		id: 1,
 		img: './assets/img/shoes.png',
