@@ -70,7 +70,7 @@ ins {
 	color: $primary-red;
 	text-decoration: none;
 }
-@media (min-width: $screen-sm-min) {
+@media (min-width: $screen-md-min) {
 	.no-padding {
 	padding: 0;
 	}

@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 
 export class SupersportHeaderComponent {
+	cartprice = 99.99;
 }

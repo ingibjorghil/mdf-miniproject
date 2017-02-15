@@ -1,22 +1,31 @@
 /*
 	Frontpage
 */
-.front-img {
-	background-image: url('../img/image.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 50% 50%;
-	height: 658px;
-	position: relative;
-	margin-bottom: 90px;
-}
 .textbox-back {
 	background-color: rgba( #000, .6 );
 	height: 297px;
 	width: 45%;
 	position: absolute;
-  	top: 50%;
-  	transform: translateY(-50%);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel-inner {
+	position: relative;
+	margin-bottom: 90px;
+}
+.item {
+	position: relative;
+	height: 658px;
+	img {
+		min-height: 100%;  
+		max-width: 100%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
 }
 .super-textbox {
 	position: absolute;
@@ -38,6 +47,17 @@
 		color: $white-color;
 		text-transform: none;
 		padding-right: 10px;
+	}
+}
+.super-mobile-textbox {
+	margin-bottom: 30px;
+	h1 {
+		color: $primary-red;
+		font-size: 40px;
+		margin-bottom: 10px;
+	}
+	h3 {
+		text-transform: none;
 	}
 }
 .img-dots {
@@ -77,7 +97,7 @@
 		@include border($border-grey, bottom);
 		width: 155px;
 		top: 50%;
-		left: 61%;
+		right: 26%;
 	}
 }
 .product-wrap {
@@ -91,6 +111,9 @@
 		position: relative;
 	}
 }
+.product-thumb {
+		width: 100%;
+	}
 .star-group {
 	position: absolute;
 	top: 0;
