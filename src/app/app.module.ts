@@ -10,6 +10,7 @@ import { SupersportFrontpageComponent } from './supersports/supersport-frontpage
 import { SupersportContactComponent } from './supersports/supersport-contact.component';
 import { SupersportDetailProductComponent } from './supersports/supersport-detail-product.component';
 import { ProductItemComponent } from './products/product-item.component';
+import { SupersportService } from './shared/supersport.service';
 import { PopularProductPipe } from './products/popularproduct.pipe';
 import { routing } from './app.routing';
 
@@ -31,7 +32,8 @@ import { routing } from './app.routing';
     PopularProductPipe
   ],
   providers: [
-    Title 
+    Title,
+    SupersportService
    ],
   bootstrap: [ 
   	AppComponent 

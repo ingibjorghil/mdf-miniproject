@@ -17,19 +17,18 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-6 col-xs-12 product-info-top">
-					{{productid}}
-					<div *ngIf="productid">
-					</div>
-				<h2>Gel-Fujitrabuco 5 G-Tx</h2>
+			<div class="col-sm-6 col-xs-12 product-info-top" *ngIf="product">
+						
+				<h2>{{product.name}}</h2>
 				<div class="row">
 					<div class="col-xs-6">
-						<img src="assets/img/brand_logo.jpg">
+						<img src="{{product.brandlogo}}">
 					</div>
 					<div class="col-xs-6 product-info-price">
-						<p class="price"><strong>kr 947.90</strong></p>
-						<p><del>kr 1115.24</del></p>
-						<p><em>You save 15.00%</em></p>
+						<p class="price"><strong>{{product.fullprice - (product.fullprice * product.discount) | number:'1.1-2'}}</strong></p>
+							<p><del>{{product.fullprice}}</del></p>
+							<p><em>You save {{product.discount * 100}}%</em></p>
+						
 					</div>
 				</div>
 				<div class="row product-select">
@@ -37,7 +36,7 @@
 					<div class="product-select-size">
 					<label>Size</label>
 					<select>
-						<option>EU 41 Black</option>
+						<option *ngFor="let product of product.size">Size</option>
 						<option>EU 42 Black</option>
 						<option selected>EU 45 Black</option>
 					</select>
