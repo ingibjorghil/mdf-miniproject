@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Products } from '../products/products.interface';
+import { Product } from '../products/products.interface';
 import { ProductItemComponent } from '../products/product-item.component';
 import { PRODUCTITEMS } from '../shared/data';
 
@@ -13,7 +13,7 @@ import { PRODUCTITEMS } from '../shared/data';
 export class SupersportFrontpageComponent {
 	constructor(private titleService: Title) { }
     
-	products:Products[];
+	products:Product[];
 
     ngOnInit() {
         this.titleService.setTitle('Supersports');

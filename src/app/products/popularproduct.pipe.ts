@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-import { isPopularProduct } from './products.interface';
+import { isPopularProduct } from './products';
 
 @Pipe({ name: 'popularproduct' })
 export class PopularProductPipe implements PipeTransform {

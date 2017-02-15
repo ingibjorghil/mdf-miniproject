@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Products, isPopularProduct } from './products.interface';
+import { Product, isPopularProduct } from './products';
 import { PRODUCTITEMS } from '../shared/data';
 
 @Component({
