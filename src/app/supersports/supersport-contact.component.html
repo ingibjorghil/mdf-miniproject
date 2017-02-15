@@ -1,0 +1,36 @@
+<div class="main">
+	<div class="container">
+		<div class="row">
+		
+		<form #f="ngForm" (ngSubmit)="onSubmit(f.value)" class="contact-us col-sm-5 col-xs-12 no-padding">
+			<h1>Contact Us</h1>
+			<div class="group">
+			<label for="contactName">Name:</label>
+			<input id="contactName" type="text" name="name" placeholder="Your Name...">
+			</div>
+			<div class="group">
+			<label for="contactEmail">Email:</label>
+			<input id="contactEmail" type="email" name="email" placeholder="Your Email...">
+			</div>
+			<div class="group-message">
+			<label for="contactMessage">Message:</label>
+			<textarea id="contactMessage" type="text" name="message" placeholder="Your text..."></textarea>
+			</div>
+			<button type="submit">Send message</button>
+
+		</form>
+		</div>
+	</div>
+	
+	<div class="newsletter">
+		<div class="container no-padding">
+			<div class="newsletter-content">
+				<h2>Sign up for exclusive sales and product news</h2>
+				<div class="signup clearfix">
+					<input type="email" name="email" placeholder="Lorem@ipsum.com">
+					<button type="submit">Sign up</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!--main -->

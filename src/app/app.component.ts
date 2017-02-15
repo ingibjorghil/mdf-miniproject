@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'my-app',
   template: `
   	<supersport-header></supersport-header>
-  	<supersport-frontpage></supersport-frontpage>
+  	<router-outlet></router-outlet>
   	<supersport-footer></supersport-footer>
   	`,
 })
