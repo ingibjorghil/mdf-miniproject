@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
   	<supersport-footer></supersport-footer>
   	`,
 })
+
 export class AppComponent  { name = 'Angular'; }

@@ -166,6 +166,11 @@ input {
   border-top: 1px solid #7e7f84; }
   input:focus {
     outline: none; }
+  input.ng-touched.ng-invalid {
+    border-right: 1px solid #f45a40;
+    border-left: 1px solid #f45a40;
+    border-bottom: 1px solid #f45a40;
+    border-top: 1px solid #f45a40; }
 
 textarea {
   padding: 14px 24px;

@@ -17,20 +17,20 @@
 			</div>
 			<div class="footer-column-2 hidden-xs">
 				<h2>{{secondColumnTitle}}</h2>
-				<h4>Lorem ipsum hey</h4>
+				<a href="#"><h4>Lorem ipsum hey</h4></a>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed auctor elit.</p>
-				<h4>New sexy sport clothes are here!</h4>
+				<a href="#"><h4>New sexy sport clothes are here!</h4></a>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed auctor elit.</p>
-				<h4>Summer sales are coming!</h4>
+				<a href="#"><h4>Summer sales are coming!</h4></a>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed auctor elit.</p>
 			</div>
 			<div class="footer-column-3">
 				<h2>{{thirdColumnTitle}}</h2>
 				<ul>
-					<li *ngFor="let firstlink of firstlinks">{{firstlink.name}}</li>
+					<li *ngFor="let firstlink of firstlinks"><a href="#">{{firstlink.name}}</a></li>
 				</ul>
 				<ul>
-					<li *ngFor="let secondlink of secondlinks">{{secondlink.name}}</li>
+					<li *ngFor="let secondlink of secondlinks"><a href="#">{{secondlink.name}}</a></li>
 					<li class="visible-xs-block">Blog Posts</li>
 				</ul>
 			</div>

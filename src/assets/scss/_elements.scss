@@ -44,6 +44,9 @@ input {
 	&:focus {
 		outline: none;
 	}
+	&.ng-touched.ng-invalid {
+		@include border(1px solid $primary-red, right, left, bottom, top);
+	}
 }
 textarea {
 	padding: 14px 24px;
