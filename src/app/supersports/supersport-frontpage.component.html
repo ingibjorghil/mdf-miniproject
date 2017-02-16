@@ -7,7 +7,6 @@
     <li data-target="#frontpage-carousel" data-slide-to="2"></li>
     <li data-target="#frontpage-carousel" data-slide-to="3"></li>
     <li data-target="#frontpage-carousel" data-slide-to="4"></li>
-    <li data-target="#frontpage-carousel" data-slide-to="5"></li>
   </ol>
 
   <!-- Wrapper for slides -->
@@ -16,8 +15,7 @@
       <img 
 				srcset="assets/img/responsive/frontslide1.jpg 1920w,
 						assets/img/responsive/frontslide1@0.5x.jpg 960w,
-						assets/img/responsive/frontslide1@0.25x.jpg 480w"
-				sizes="" 
+						assets/img/responsive/frontslide1@0.25x.jpg 480w" 
 				src="assets/img/responsive/frontslide1@0.75x.jpg">
     </div>
     <div class="item">
@@ -96,116 +94,28 @@
 		<div class="popular-products">
 			<h2 class="border-text">POPULAR PRODUCTS</h2>
 			<div class="row margin-bottom">
-				<div class="col-md-3 col-xs-6" *ngFor="let product of (products | popularproduct)">
+				<div class="col-md-3 col-xs-6 margin-bottom" *ngFor="let product of (products | popularproduct)">
 					<div class="product-wrap">
 						<div class="product-img">
-							<div class="star-group">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-							</div>
-							<img class="product-thumb" src="{{product.imgthumb}}">
+							<app-stars [stars]='product.stars' 
+                [itemId]='product.id' 
+                (starsClick)='starRatingComponentClick($event)'>
+    					</app-stars>
+							<img class="product-thumb"
+							srcset="assets/img/responsive/{{product.imgthumb}}.jpg 1920w,
+							assets/img/responsive/{{product.imgthumb}}@0.5x.jpg 960w,
+							assets/img/responsive/{{product.imgthumb}}@0.25x.jpg 480w"
+							src="assets/img/responsive/{{product.imgthumb}}@0.75x.jpg">
 						</div>
 						<div class="product-text">
 							<h3><a [routerLink]="['/product',product.id]">{{product.name}}</a></h3>
 							<h4>{{product.category}}</h4>
 							<p>{{product.shortdescription}}</p>
-							<ins>$ 86.99</ins>
-						<img src="assets/img/heart.svg">
-						<img src="assets/img/plus.svg">
+							<ins>{{product.fullprice - (product.fullprice * product.discount) | currency:'EUR':1.1-2}}</ins>
+						<img class="icon" src="assets/img/heart.svg">
+						<img class="icon" src="assets/img/plus.svg">
 						</div>
-						<button>buy now</button>
-					</div>
-				</div>
-			</div>
-			<div class="row margin-bottom">
-				<div class="col-sm-3">
-					<div class="product-wrap">
-						<div class="product-img">
-							<div class="star-group">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-							</div>
-							<img class="product-thumb" src="assets/img/shoe.png">
-						</div>
-						<div class="product-text">
-							<h3><a routerLink="/detail-product">Gel-Fujitrabuco 5 G-Tx</a></h3>
-							<h4>Running shoe</h4>
-							<p>God og robust terrænløbesko med GORE-TEX-membran. Overdel i let mesh og sål med affjedring både i hæl og forfod....</p>
-							<ins>$ 86.99</ins>
-						<img src="assets/img/heart.svg">
-						<img src="assets/img/plus.svg">
-						</div>
-						<button>buy now</button>
-					</div>
-				</div>
-				<div class="col-sm-3">
-					<div class="product-wrap">
-						<div class="product-img">
-							<div class="star-group">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-							</div>
-							<img class="product-thumb" src="assets/img/shoe.png">
-						</div>
-						<div class="product-text">
-							<h3><a routerLink="/detail-product">Gel-Fujitrabuco 5 G-Tx</a></h3>
-							<h4>Running shoe</h4>
-							<p>God og robust terrænløbesko med GORE-TEX-membran. Overdel i let mesh og sål med affjedring både i hæl og forfod....</p>
-							<ins>$ 86.99</ins>
-						<img src="assets/img/heart.svg">
-						<img src="assets/img/plus.svg">
-						</div>
-						<button>buy now</button>
-					</div>
-				</div>
-				<div class="col-sm-3">
-					<div class="product-wrap">
-						<div class="product-img">
-							<div class="star-group">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-							</div>
-							<img class="product-thumb" src="assets/img/shoe.png">
-						</div>
-						<div class="product-text">
-							<h3><a routerLink="/detail-product">Gel-Fujitrabuco 5 G-Tx</a></h3>
-							<h4>Running shoe</h4>
-							<p>God og robust terrænløbesko med GORE-TEX-membran. Overdel i let mesh og sål med affjedring både i hæl og forfod....</p>
-							<ins>$ 86.99</ins>
-						<img src="assets/img/heart.svg">
-						<img src="assets/img/plus.svg">
-						</div>
-						<button>buy now</button>
-					</div>
-				</div>
-				<div class="col-sm-3">
-					<div class="product-wrap">
-						<div class="product-img">
-							<div class="star-group">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-								<img src="assets/img/star.svg">
-							</div>
-							<img class="product-thumb" src="assets/img/shoe.png">
-						</div>
-						<div class="product-text">
-							<h3><a routerLink="/detail-product">Gel-Fujitrabuco 5 G-Tx</a></h3>
-							<h4>Running shoe</h4>
-							<p>God og robust terrænløbesko med GORE-TEX-membran. Overdel i let mesh og sål med affjedring både i hæl og forfod....</p>
-							<ins>$ 86.99</ins>
-						<img src="assets/img/heart.svg">
-						<img src="assets/img/plus.svg">
-						</div>
-						<button>buy now</button>
+						<button [routerLink]="['/product',product.id]">buy now</button>
 					</div>
 				</div>
 			</div>

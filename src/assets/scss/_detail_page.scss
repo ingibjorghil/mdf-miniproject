@@ -2,6 +2,10 @@
 	@include border($border-grey,top, right, bottom, left);
 	padding: 10px;
 	text-align: center;	
+	height: 440px;
+	@include flexbox();
+	align-items: center;
+	justify-content: center;
 }
 .product-img-group {
 	@include flexbox();
@@ -19,9 +23,12 @@
 	&:last-child {
 		margin-right: 0;
 	}
+	&:hover {
+		@include border(1px solid $primary-red,top, right, bottom, left);
+	}
 }
-.img-selected {
-	@include border(1px solid $primary-red,top, right, bottom, left);
+.small-img {
+	width: 100%;
 }
 .product-info-top {
 	strong {
@@ -29,6 +36,9 @@
 		font-weight: 800;
 		letter-spacing: 0.07em;
 		color: #000;
+	}
+	.brandlogo {
+		max-width: 160px;
 	}
 	.product-info-price {
 		text-align: right;

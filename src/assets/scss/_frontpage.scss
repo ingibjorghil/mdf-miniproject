@@ -104,9 +104,17 @@
 	button {
 		width: 100%;
 		padding: 10px 20px;
+		&:hover {
+			font-size: 16px;
+			padding: 9px 20px;
+		}
 	}
 	.product-img {
-		padding: 53px 10px;
+		min-height: 260px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px;
 		@include border($border-grey, top, bottom, left, right);
 		position: relative;
 	}
@@ -114,13 +122,41 @@
 .product-thumb {
 		width: 100%;
 	}
-.star-group {
-	position: absolute;
+.rating {
+  position: absolute;
 	top: 0;
-	img {
-		width: 13px;
-		height: 13px;
+	left: 10px;
+  &:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
 	}
+	&:not(:checked) > label {
+    float:right;
+    width:1.2em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:110%;
+    line-height:1.2;
+    color:#ddd;
+    &:before {
+    	content: '★ ';
+		}
+	}
+}
+.rating > input:checked ~ label {
+    color: $primary-red;
+}
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: $light-red;
+}
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: $light-red;
 }
 .product-text {
 	@include border($border-grey, left, right);
@@ -142,6 +178,11 @@
 	img {
 		float: right;
 		padding-left: 8px;
+	}
+	.icon {
+		&:hover {
+			color: $primary-red;
+		}
 	}
 }
 .newsletter {
