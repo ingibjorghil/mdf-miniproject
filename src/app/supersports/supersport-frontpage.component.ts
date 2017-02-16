@@ -1,4 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, Input, Output, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Product } from '../products/products.interface';
 import { ProductItemComponent } from '../products/product-item.component';
@@ -12,7 +12,7 @@ import { StarRatingComponent } from './star-rating.component';
 	directives: [StarRatingComponent]
 })
 
-export class SupersportFrontpageComponent {
+export class SupersportFrontpageComponent implements OnInit{
 	constructor(private titleService: Title) { }
     
 	products:Product[];
@@ -22,7 +22,7 @@ export class SupersportFrontpageComponent {
       this.products = PRODUCTITEMS;
   }
 
-  starsComponetClick(clickObj: any): void {
+  starRatingComponentClick(clickObj: any): void {
       console.log(`The Item ${clickObj.itemId} 
           has been given ${clickObj.stars} stars, 
           now is time to update the item with the new rating`);

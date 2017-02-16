@@ -24,6 +24,7 @@ import { routing } from './app.routing';
   ],
   declarations: [ 
   	AppComponent, 
+    StarRatingComponent,
   	SupersportHeaderComponent, 
   	SupersportFooterComponent, 
   	SupersportFrontpageComponent,
@@ -31,7 +32,6 @@ import { routing } from './app.routing';
     SupersportDetailProductComponent,
     ProductItemComponent,
     PopularProductPipe,
-    StarRatingComponent
   ],
   providers: [
     Title,

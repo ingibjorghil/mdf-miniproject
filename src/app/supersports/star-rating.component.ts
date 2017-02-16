@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-    selector:'app-rating',
+    selector:'app-stars',
     moduleId: module.id,
     templateUrl:'star-rating.component.html'
 })

@@ -97,10 +97,10 @@
 				<div class="col-md-3 col-xs-6 margin-bottom" *ngFor="let product of (products | popularproduct)">
 					<div class="product-wrap">
 						<div class="product-img">
-							<app-rating [stars]='product.stars' 
+							<app-stars [stars]='product.stars' 
                 [itemId]='product.id' 
-                (starsClick)='starsComponetClick($event)'>
-    					</app-rating>
+                (starsClick)='starRatingComponentClick($event)'>
+    					</app-stars>
 							<img class="product-thumb"
 							srcset="assets/img/responsive/{{product.imgthumb}}.jpg 1920w,
 							assets/img/responsive/{{product.imgthumb}}@0.5x.jpg 960w,
