@@ -14,6 +14,12 @@ h1, h2, h3, h4, h5 {
 span  {
 	font-family: $font-main;
 }
+a {
+	color: $dark-grey;
+	&:hover {
+		color: $primary-red;
+	}
+}
 button {
 	background-color: $primary-red;
 	color: $white-color;
@@ -38,6 +44,13 @@ input {
 	&:focus {
 		outline: none;
 	}
+}
+textarea {
+	padding: 14px 24px;
+	resize: none;
+			&:focus {
+				outline: none;
+			}
 }
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 

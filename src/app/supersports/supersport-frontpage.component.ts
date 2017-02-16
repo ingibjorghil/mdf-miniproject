@@ -1,13 +1,15 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Product } from '../products/products.interface';
 import { ProductItemComponent } from '../products/product-item.component';
 import { PRODUCTITEMS } from '../shared/data';
+import { StarRatingComponent } from './star-rating.component';
 
 @Component({
 	selector: 'supersport-frontpage',
 	moduleId: module.id,
-	templateUrl: 'supersport-frontpage.component.html'
+	templateUrl: 'supersport-frontpage.component.html',
+	directives: [StarRatingComponent]
 })
 
 export class SupersportFrontpageComponent {
@@ -15,11 +17,16 @@ export class SupersportFrontpageComponent {
     
 	products:Product[];
 
-    ngOnInit() {
-        this.titleService.setTitle('Supersports');
-        this.products = PRODUCTITEMS;
-    }
+  ngOnInit() {
+      this.titleService.setTitle('Supersports');
+      this.products = PRODUCTITEMS;
+  }
 
+  starsComponetClick(clickObj: any): void {
+      console.log(`The Item ${clickObj.itemId} 
+          has been given ${clickObj.stars} stars, 
+          now is time to update the item with the new rating`);
+    }
 	frontpagecategories = [{
 		id: 1,
 		img: './assets/img/shoes.png',

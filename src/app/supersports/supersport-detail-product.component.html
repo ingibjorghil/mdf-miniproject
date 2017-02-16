@@ -1,34 +1,49 @@
-<div class="main margin-top">
+<div class="main margin-top" *ngIf="product">
 	<div class="container no-padding">
 		<div class="row">
 			<div class="col-sm-6 col-xs-12">
 				<div class="product-big-img">
-					<img src="assets/img/shoe_big.jpg">
+					<img id="large-img"
+							srcset="assets/img/responsive/{{product.img3}}.jpg 1920w,
+							assets/img/responsive/{{product.img3}}@0.5x.jpg 960w,
+							assets/img/responsive/{{product.img3}}@0.25x.jpg 480w"
+							src="assets/img/responsive/{{product.img3}}@0.75x.jpg" id="view-img">
 				</div>
 				<div class="product-img-group">
 					<div class="col-xs-4 product-small-img">
-						<img src="assets/img/shoe_3.jpg">
-					</div>
-					<div class="col-xs-4 product-small-img img-selected">
-						<img src="assets/img/shoe_1.jpg">
+						<img class="small-img"
+							srcset="assets/img/responsive/{{product.img1}}.jpg 1920w,
+							assets/img/responsive/{{product.img1}}@0.5x.jpg 960w,
+							assets/img/responsive/{{product.img1}}@0.25x.jpg 480w"
+							src="assets/img/responsive/{{product.img1}}@0.75x.jpg">
 					</div>
 					<div class="col-xs-4 product-small-img">
-						<img src="assets/img/shoe_2.jpg">
+						<img class="small-img"
+							srcset="assets/img/responsive/{{product.img2}}.jpg 1920w,
+							assets/img/responsive/{{product.img2}}@0.5x.jpg 960w,
+							assets/img/responsive/{{product.img2}}@0.25x.jpg 480w"
+							src="assets/img/responsive/{{product.img2}}@0.75x.jpg">
+					</div>
+					<div class="col-xs-4 product-small-img">
+						<img class="small-img"
+							srcset="assets/img/responsive/{{product.img3}}.jpg 1920w,
+							assets/img/responsive/{{product.img3}}@0.5x.jpg 960w,
+							assets/img/responsive/{{product.img3}}@0.25x.jpg 480w"
+							src="assets/img/responsive/{{product.img3}}@0.75x.jpg">
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-6 col-xs-12 product-info-top" *ngIf="product">
+			<div class="col-sm-6 col-xs-12 product-info-top">
 						
 				<h2>{{product.name}}</h2>
 				<div class="row">
 					<div class="col-xs-6">
-						<img src="{{product.brandlogo}}">
+						<img class="brandlogo" src="{{product.brandlogo}}">
 					</div>
 					<div class="col-xs-6 product-info-price">
 						<p class="price"><strong>{{product.fullprice - (product.fullprice * product.discount) | number:'1.1-2'}}</strong></p>
 							<p><del>{{product.fullprice}}</del></p>
 							<p><em>You save {{product.discount * 100}}%</em></p>
-						
 					</div>
 				</div>
 				<div class="row product-select">
@@ -36,9 +51,7 @@
 					<div class="product-select-size">
 					<label>Size</label>
 					<select>
-						<option *ngFor="let product of product.size">Size</option>
-						<option>EU 42 Black</option>
-						<option selected>EU 45 Black</option>
+						<option *ngFor="let product of product.size" [value]="product"> {{product}}</option>
 					</select>
 					</div>
 					<div class="product-select-amount">
@@ -62,8 +75,7 @@
 	        <div id="tab-1" class="tab-content container">
 	        	<div class="row">
 		        	<div class="col-sm-6">
-		        		<p> Tab - 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit, elit vitae porttitor facilisis, urna nunc sollicitudin nibh, eu sodales metus nisi a orci. Cras posuere, mauris sit amet congue commodo, ex mauris auctor massa, at tincidunt massa quam eget mauris. Suspendisse quis dignissim lacus.</p> 
-		        		<p>Duis vitae ante non diam porttitor porttitor nec non quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer ac risus cursus lectus fermentum consectetur. In hac habitasse platea dictumst. Fusce tristique rutrum elit id luctus. Fusce malesuada justo quis mauris scelerisque finibus. Cras porta, tortor non interdum fringilla, lorem erat aliquam justo, ut pulvinar arcu diam in odio. Etiam at nulla commodo, bibendum dolor sed, molestie justo. Integer nulla metus, efficitur eu malesuada placerat, porttitor et sapien.</p>
+		        		<p>{{product.longdescription}}</p>
 		        	</div>
 		        	<div class="col-sm-6">
 		        		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit, elit vitae porttitor facilisis, urna nunc sollicitudin nibh, eu sodales metus nisi a orci. Cras posuere, mauris sit amet congue commodo, ex mauris auctor massa, at tincidunt massa quam eget mauris. Suspendisse quis dignissim lacus.</p> 
