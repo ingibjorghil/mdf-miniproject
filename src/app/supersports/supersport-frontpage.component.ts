@@ -1,6 +1,6 @@
 import { Component, Input, Output, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Product } from '../products/products.interface';
+import { Product } from '../products/products';
 import { ProductItemComponent } from '../products/product-item.component';
 import { PRODUCTITEMS } from '../shared/data';
 import { StarRatingComponent } from './star-rating.component';
@@ -9,7 +9,6 @@ import { StarRatingComponent } from './star-rating.component';
 	selector: 'supersport-frontpage',
 	moduleId: module.id,
 	templateUrl: 'supersport-frontpage.component.html',
-	directives: [StarRatingComponent]
 })
 
 export class SupersportFrontpageComponent implements OnInit{

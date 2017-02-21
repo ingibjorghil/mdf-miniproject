@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Validators, FormBuilder, FormGroup } from '@angular/forms';
+import { Validators, FormBuilder, FormGroup, NgForm } from '@angular/forms';
 
 class ContactForm {
   contactname: string;
@@ -31,4 +31,3 @@ export class SupersportContactComponent implements OnInit {
       this.hasBeenSubmitted = true;
     }
   }
-}

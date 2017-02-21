@@ -4,7 +4,7 @@ import { isPopularProduct } from './products';
 
 @Pipe({ name: 'popularproduct' })
 export class PopularProductPipe implements PipeTransform {
-  transform(allProducts: isPopularProduct) {
+  transform(allProducts: isPopularProduct[]) {
     return allProducts.filter(product => product.popularproduct);
   }
 }
